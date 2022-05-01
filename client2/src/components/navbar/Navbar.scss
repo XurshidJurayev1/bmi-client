@@ -1,0 +1,29 @@
+.nvb {
+  position: relative;
+
+  ul {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 10px;
+
+    li {
+      a {
+        &:hover {
+          border-bottom: 2px #1266f1 solid;
+          transition: all 1s ease;
+        }
+      }
+
+      .active {
+        border-bottom: 2px #1266f1 solid;
+        transition: all 1s ease;
+      }
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+}

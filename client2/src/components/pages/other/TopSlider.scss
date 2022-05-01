@@ -1,0 +1,30 @@
+.contact__bg {
+  width: 100%;
+  height: 440px;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__breadcrumb {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+      background-color: rgba(33, 37, 41, 0.63);
+      padding: 35px 45px;
+
+      nav {
+        --bs-breadcrumb-divider: '>';
+      }
+    }
+  }
+}

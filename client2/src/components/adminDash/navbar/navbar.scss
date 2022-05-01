@@ -1,0 +1,139 @@
+.navbar {
+  height: 50px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  flex-wrap: nowrap;
+
+  .wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 990px) {
+      flex-direction: column;
+      
+    }
+
+    .flex{
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      width: 100%;
+      padding: 0 15px 0 0;
+
+      .sidebar-btn{
+        cursor: pointer;
+
+        .items{
+          margin: 0;
+        }
+      }
+
+      .navbar-btn{
+        display: none;
+        margin: 0;
+
+        .item{
+          margin: 0;
+        }
+
+        svg{
+          font-size:25px
+        }
+  
+        @media (max-width: 990px) {
+          display: flex;
+          align-items: center;
+        }
+      }
+      @media (max-width: 990px) {
+        padding: 0;
+      }
+    }
+    
+    
+    
+    .search {
+      display: flex;
+      align-items: center;
+      border: 0.5px solid lightgray;
+      padding: 3px;
+
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+
+        &::placeholder {
+          font-size: 12px;
+        }
+        &:focus ~ .search{
+          box-shadow: 2px 4px 10px 1px rgba(69, 153, 189, 0.777)
+        }
+      }
+    }
+
+    .nav-menu{
+      @media (max-width: 990px) {
+        position: absolute;
+        top: 50px;
+        left: auto ;
+        width: 100%;
+        height: 0px;
+        border-bottom: 0.5px solid rgb(231, 228, 228);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .items {
+      display: flex;
+      align-items: center;
+      
+
+      
+
+      .item {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+
+        .icon {
+          font-size: 20px;
+        }
+
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+
+        .counter {
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+        }
+      }
+    }
+  }
+}

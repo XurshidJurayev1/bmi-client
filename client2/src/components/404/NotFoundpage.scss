@@ -1,0 +1,24 @@
+.NotFoundpage{
+    background: rgb(216, 253, 247);
+    padding: 50px 50px;
+    &__flex{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__img{
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__col{
+        &-4{
+            width: calc(100% / 3);
+            @media (max-width: 768px) {
+                width: 90%;
+            }
+        }
+    }
+}
