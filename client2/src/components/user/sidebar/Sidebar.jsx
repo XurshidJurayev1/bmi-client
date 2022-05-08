@@ -87,7 +87,7 @@ const Sidebar = (props) => {
           <Link to="/student/courses" style={{ textDecoration: 'none' }}>
             <li>
               <PersonOutlineIcon className="icon" />
-              <span>Users</span>
+              <span>Courses</span>
             </li>
           </Link>
           <Link to="/student/teachers" style={{ textDecoration: 'none' }}>
@@ -96,36 +96,8 @@ const Sidebar = (props) => {
               <span>teachers</span>
             </li>
           </Link>
-          <li>
-            <CreditCardIcon className="icon" />
-            <span>Orders</span>
-          </li>
-          <li>
-            <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
-          </li>
-          <p className="title">USEFUL</p>
-          <li>
-            <InsertChartIcon className="icon" />
-            <span>Stats</span>
-          </li>
-          <li>
-            <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
-          </li>
-          <p className="title">SERVICE</p>
-          <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>System Health</span>
-          </li>
-          <li>
-            <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
-          </li>
-          <li>
-            <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
-          </li>
+
+
           <p className="title">USER</p>
           <Link to="/student/profile">
             <li>
@@ -143,11 +115,11 @@ const Sidebar = (props) => {
         <div
           className="colorOption"
           onClick={() => dispatch({ type: 'LIGHT' })}
-        ></div>
+        />
         <div
           className="colorOption"
           onClick={() => dispatch({ type: 'DARK' })}
-        ></div>
+        />
       </div>
     </div>
   );

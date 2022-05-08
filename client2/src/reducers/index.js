@@ -12,10 +12,21 @@ import {
   listCategory,
   createCategory, selectCategory, getCourses, selectedCourse,
 } from './adminRed';
-import { register, token, user, role, userEdit, userContactSend, listContact, selectContact } from './userRed';
+import {
+  register,
+  token,
+  user,
+  role,
+  userEdit,
+  userContactSend,
+  listContact,
+  selectContact,
+  viewsNews,
+} from './userRed';
 
 
 const rootReducer = combineReducers({
+  viewsNews,
   selectedCourse,
   getCourses,
   userSingle,

@@ -14,7 +14,6 @@ const CoursesSingle = (props) => {
   }
 
   const users = props.users;
-
   const owner = users.filter(user => user._id === props.item.owner);
   console.log(owner);
   const categ = props.categories.filter(category => category._id === props.item.category_id);

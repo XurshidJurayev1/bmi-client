@@ -86,6 +86,15 @@ export const selectContact = (state = {}, action) => {
   }
 };
 
+export const viewsNews = (state = {}, action) => {
+  switch (action.type) {
+    case 'VIEW_NEWS':
+      return action.payload;
+    default :
+      return state;
+  }
+};
+
 
 
 

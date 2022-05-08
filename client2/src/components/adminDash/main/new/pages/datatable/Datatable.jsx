@@ -20,13 +20,13 @@ const Datatable = (props) => {
 
   useEffect(() => {
     props.listNews();
-  }, [props.list]);
+  }, []);
 
   const actionColumn = [{
     field: 'action', headerName: 'Action', width: 200, renderCell: (params) => {
       return (<div className="cellAction">
-        <Link to={`/admin/news/${params}`} style={{ textDecoration: 'none' }}>
-          <div className="viewButton">View</div>
+        <Link to={`/admin/news/${params.row._id}`} style={{ textDecoration: 'none' }}>
+          <div className="viewButton" >View</div>
         </Link>
         <div
           className="deleteButton"

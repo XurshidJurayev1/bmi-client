@@ -61,6 +61,10 @@ import TeachCoursesList from './teacher/courses/List';
 import TeachCoursesSingle from './teacher/courses/Single';
 import TeachCoursesEdit from './teacher/courses/Edit';
 import TeachCoursesAdd from './teacher/courses/New';
+import TeachCategoryAdd from './teacher/categories/New';
+import TeachCategoryList from './teacher/categories/List';
+import SingleNews from './pages/news/SingleNews';
+import UserCourses from './user/components/Courses/UserCourses';
 
 
 const App = (props) => {
@@ -174,6 +178,9 @@ const App = (props) => {
                   element={<UserProfileEdit />}
                 />
               </Route>
+              <Route path="courses">
+                <Route index element={<UserCourses />} />
+              </Route>
               <Route path="*" element={<Notfoundpage />} />
             </Route>
           }
@@ -191,14 +198,14 @@ const App = (props) => {
                 />
               </Route>
               <Route path="category">
-                <Route index element={<CategoryList />} />
-                <Route path="view">
-                  <Route path=":categoryId" element={<CategorySingle />} />
-                </Route>
-                <Route path="edit" element={<CategoryEdit />} />
+                <Route index element={<TeachCategoryList />} />
+                {/*<Route path="view">*/}
+                {/*  <Route path=":categoryId" element={<CategorySingle />} />*/}
+                {/*</Route>*/}
+                {/*<Route path="edit" element={<CategoryEdit />} />*/}
                 <Route
                   path="new"
-                  element={<CategoryAdd />}
+                  element={<TeachCategoryAdd />}
                 />
               </Route>
               <Route path="courses">
@@ -217,7 +224,10 @@ const App = (props) => {
 
           <Route path="/" exact={true} element={<DefaultLayout />}>
             <Route index element={<Home />} />
-            <Route path="/news" element={<News />} />
+            <Route path="/news">
+              <Route index element={<News />} />
+              <Route path=":id" element={<SingleNews />} />
+            </Route>
             <Route path="/contact" element={<Contact />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/about" element={<About />} />

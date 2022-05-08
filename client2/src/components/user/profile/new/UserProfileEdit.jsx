@@ -28,8 +28,13 @@ const UserProfileEdit = (props) => {
     formdata.append('password', password);
 
 
-    props.profileEdit(formdata, user._id);
-    navigate('/student/profile');
+    if (file.length === 0) {
+      window.alert('please select image');
+    } else {
+      props.profileEdit(formdata, user._id);
+      navigate('/student/profile');
+      console.log('else');
+    }
 
   };
 

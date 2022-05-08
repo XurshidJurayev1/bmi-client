@@ -65,6 +65,8 @@ export const profileEdit = (user, id) => async (dispatch) => {
   });
 };
 
+// ---- news ----
+
 export const addNews = news => async (dispatch) => {
   const res = await api.post('/news/create', news);
   dispatch({
@@ -89,6 +91,13 @@ export const deleteNews = (id) => async (dispatch) => {
   });
 };
 
+export const viewNews = (item) => async (dispatch) => {
+  dispatch({
+    type: 'VIEW_NEWS',
+    payload: item,
+  });
+
+};
 
 // ----- Contact Action ------
 export const sendContactMessage = msg => async (dispatch) => {
@@ -199,6 +208,8 @@ export const updateCourse = (id, course) => async (dispatch) => {
     payload: res.data,
   });
 };
+
+
 
 
 

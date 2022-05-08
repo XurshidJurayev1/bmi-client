@@ -28,8 +28,12 @@ const TeacherProfileEdit = (props) => {
     formdata.append('password', password);
 
 
-    props.profileEdit(formdata, user._id);
-    navigate('/teacher/profile');
+    if (file.length === 0) {
+      window.alert('PLease select image');
+    } else {
+      props.profileEdit(formdata, user._id);
+      navigate('/teacher/profile');
+    }
 
   };
 

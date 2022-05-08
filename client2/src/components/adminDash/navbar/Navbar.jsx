@@ -9,6 +9,7 @@ import { useContext, useState } from 'react';
 import { DarkModeContext } from '../../../context/darkModeContext';
 import { connect } from 'react-redux';
 import { ImageApi } from '../../../Api/ImageApi';
+import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
   const { dispatch } = useContext(DarkModeContext);
@@ -56,16 +57,18 @@ const Navbar = (props) => {
           </div>
 
           <div className="item">
-            <img
-              src={
-                props.user.image_path.length > 0 ?
-                  `${ImageApi}${props.user.image_path}`
-                  :
-                  'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
-              }
-              alt=""
-              className="avatar"
-            />
+            <Link to="/admin/profile">
+              <img
+                src={
+                  props.user.image_path.length > 0 ?
+                    `${ImageApi}${props.user.image_path}`
+                    :
+                    'https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg'
+                }
+                alt=""
+                className="avatar"
+              />
+            </Link>
           </div>
         </div>
       </div>

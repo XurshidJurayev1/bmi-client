@@ -30,15 +30,15 @@ const NewsAdd = (props) => {
       setFile('');
       setTitle('');
       setText('');
-      setLink('')  ;
+      setLink('');
     }
 
   };
 
 
-  function createMarkup() {
-    return { __html: `${text}` };
-  }
+  // function createMarkup() {
+  //   return { __html: `${text}` };
+  // }
 
 
   return (
@@ -58,7 +58,7 @@ const NewsAdd = (props) => {
             alt=""
           />
 
-          <div dangerouslySetInnerHTML={createMarkup()} />
+          {/*<div dangerouslySetInnerHTML={createMarkup()} />*/}
 
         </div>
         <div className="right">

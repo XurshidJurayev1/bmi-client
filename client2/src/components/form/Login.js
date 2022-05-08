@@ -24,6 +24,18 @@ const Login = (props) => {
 
   useEffect(() => {
 
+    if (props.role.length > 0 && props.selectedCourse) {
+      switch (props.role[0]) {
+        case 'USER' :
+          return navigate('/student/courses');
+        case 'TEACHER' :
+          return navigate('/teacher');
+        case 'ADMIN' :
+          return navigate('/admin');
+        default :
+          return null;
+      }
+    }
     if (props.role.length > 0) {
       switch (props.role[0]) {
         case 'USER' :
@@ -86,7 +98,7 @@ const Login = (props) => {
             <Link to="/register">register</Link>
           </div>
           <div className="col-4">
-            <Link to='/'>home</Link>
+            <Link to="/">home</Link>
           </div>
 
         </form>
@@ -102,6 +114,7 @@ const mapStateToProps = (state) => {
     token: state.token,
     role: state.role,
     user: state.user,
+    selectedCourse: state.selectedCourse,
   };
 };
 
